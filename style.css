@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0rem 0.3rem;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 42rem;
+  margin: auto;
+  color: var(--color);
+  background: var(--bg);
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:root {
+  --color: hsl(0 0% 6%);
+  --bg: hsl(0 0% 98%);
+  --border: hsl(0, 0%, 22%);
+  --expo-out: linear(
+    0 0%,
+    0.1684 2.66%,
+    0.3165 5.49%,
+    0.446 8.52%,
+    0.5581 11.78%,
+    0.6535 15.29%,
+    0.7341 19.11%,
+    0.8011 23.3%,
+    0.8557 27.93%,
+    0.8962 32.68%,
+    0.9283 38.01%,
+    0.9529 44.08%,
+    0.9711 51.14%,
+    0.9833 59.06%,
+    0.9915 68.74%,
+    1 100%
+  );
+  --expo-in: linear(
+    0 0%,
+    0.0085 31.26%,
+    0.0167 40.94%,
+    0.0289 48.86%,
+    0.0471 55.92%,
+    0.0717 61.99%,
+    0.1038 67.32%,
+    0.1443 72.07%,
+    0.1989 76.7%,
+    0.2659 80.89%,
+    0.3465 84.71%,
+    0.4419 88.22%,
+    0.554 91.48%,
+    0.6835 94.51%,
+    0.8316 97.34%,
+    1 100%
+  );
+}
+
+h1 {
+  letter-spacing: -0.05em;
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
+  line-height: 1;
+  font-weight: bolder;
+}
+
+pre {
+  max-width: 100%;
+}
+
+p {
+  width: 60ch;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color);
+}
+
+a:is(:hover, :focus-visible) {
+  border-bottom: 2px solid rgb(0, 140, 255);
+}
+
+.dark a:is(:hover, :focus-visible) {
+  border-bottom: 2px solid rgb(0, 183, 255);
+}
+
+.dark {
+  --color: hsl(0 0% 98%);
+  --bg: hsl(0 0% 6%);
+  --border: hsl(0, 0%, 52%);
+}
+
+.theme-toggle {
+  color: var(--color);
+  padding: 5px 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  background: transparent;
+  transition: background 0.2s;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.theme-toggle:is(:hover, :focus-visible) {
+  background: hsl(0 0% 90%);
+}
+
+.dark .theme-toggle:is(:hover, :focus-visible) {
+  background: hsl(0 0% 30%);
+}
+
+.theme-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
