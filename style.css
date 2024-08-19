@@ -113,7 +113,6 @@ a:is(:hover, :focus-visible) {
   border: 1px solid var(--border);
   display: grid;
   place-items: center;
-  border-radius: 5px;
   background: transparent;
   transition: background 0.2s;
   cursor: pointer;
@@ -131,4 +130,21 @@ a:is(:hover, :focus-visible) {
 .theme-toggle:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.tweet-container {
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tweets-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.twitter-tweet {
+  flex: 1;
 }
