@@ -7,11 +7,13 @@ const ANIMATIONS = [
       }
       ::view-transition-old(root), .dark::view-transition-old(root) { 
         animation: none; 
+        animation-fill-mode: both;
         z-index: -1; 
       }
       ::view-transition-new(root) {
         mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="white"/></svg>') center / 0 no-repeat;
         animation: scale 1s;
+        animation-fill-mode: both;
       }
       @keyframes scale { 
         to { 
@@ -29,14 +31,17 @@ const ANIMATIONS = [
       ::view-transition-new(root) {
         mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="20" cy="20" r="18" fill="white" filter="url(%23blur)"/></svg>') center / 0 no-repeat;
         animation: scale 1s;
+        animation-fill-mode: both;
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
         animation: none;
+        animation-fill-mode: both;
         z-index: -1;
       }
       .dark::view-transition-new(root) {
         animation: scale 1s;
+        animation-fill-mode: both;
       }
       @keyframes scale {
         to {
@@ -55,11 +60,13 @@ const ANIMATIONS = [
         mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="0" cy="0" r="18" fill="white" filter="url(%23blur)"/></svg>') top left / 0 no-repeat;
         mask-origin: content-box;
         animation: scale 1s;
+        animation-fill-mode: both;
         transform-origin: top left;
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
         animation: scale 1s;
+        animation-fill-mode: both;
         transform-origin: top left;
         z-index: -1;
       }
@@ -79,14 +86,17 @@ const ANIMATIONS = [
       }
       ::view-transition-new(root) {
         animation-name: reveal-light;
+        animation-fill-mode: both;
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
         animation: none;
+        animation-fill-mode: both;
         z-index: -1;
       }
       .dark::view-transition-new(root) {
         animation-name: reveal-dark;
+        animation-fill-mode: both;
       }
       @keyframes reveal-dark {
         from {
@@ -116,10 +126,12 @@ const ANIMATIONS = [
         mask: url('assets/custom-svg.svg') top left / 0 no-repeat;
         mask-origin: top left;
         animation: scale 1.5s;
+        animation-fill-mode: both;
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
         animation: scale 1.5s;
+        animation-fill-mode: both;
         z-index: -1;
         transform-origin: top left;
       }
@@ -139,10 +151,12 @@ const ANIMATIONS = [
       ::view-transition-new(root) {
         mask: url('https://media.tenor.com/cyORI7kwShQAAAAi/shigure-ui-dance.gif') center / 0 no-repeat;
         animation: scale 3s;
+        animation-fill-mode: both;
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
         animation: scale 3s;
+        animation-fill-mode: both;
       }
       @keyframes scale {
         0% {
@@ -169,10 +183,12 @@ const ANIMATIONS = [
       ::view-transition-new(root) {
         mask: url('https://media.tenor.com/Jz0aSpk9VIQAAAAi/i-love-you-love.gif') center / 0 no-repeat;
         animation: scale 2s;
+        animation-fill-mode: both;
       }
       ::view-transition-old(root),
       .dark::view-transition-old(root) {
         animation: scale 2s;
+        animation-fill-mode: both;
       }
       @keyframes scale {
         0% {
